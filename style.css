@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: antiquewhite;
+    border: 2px solid black;
+    height:100vh;
+    width: 100vw;
+}
+.box{
+    background-color: rgb(10, 60, 226);
+    width:250px;
+    height:80px;
+    border-radius: 10px;
+    border: 3px solid yellow;
+    margin:10px;
+    position: relative;
+    /* animation-name: rightMovement;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    /* animation-delay: 1s; */
+    /*animation-timing-function: linear; */
+    /* animation-direction: alternate; */
+    /* animation-fill-mode: forwards; */
+
+    /*duration |timing function| delay | count| direction| fill mode|play state|name*/
+    animation: 5s linear 1s infinite alternate none running rightMovement;
+}
+.box2{
+    background-color: rgb(10, 60, 226);
+    width:250px;
+    height:80px;
+    border-radius: 10px;
+    border: 3px solid yellow;
+    margin:10px;
+    position: relative;
+    animation: 5s linear 1s infinite alternate none running leftMovement;
+}
+.circle{
+    background-color: rgb(10, 60, 226);
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+    border: 3px solid yellow;
+    position: relative;
+    top:150px;
+    left:600px;
+    animation: 10s ease-in-out 0s infinite alternate none running circleMovement;
+}
+@keyframes rightMovement {
+    from{
+       left:0;
+    }
+    to{
+       left:1100px;
+    }
+}
+@keyframes leftMovement {
+    from{
+       top:300px;
+       left:1100px;
+    }
+    to{
+       top:300px;
+       left:0;
+    }
+}
+@keyframes circleMovement {
+    0%{
+        top:1%;
+        left:5%;
+    }
+    30%{
+        top:5%;
+        left:90%;
+    }
+    60%{
+        top:50%;
+        left:10%;
+    }
+    100%{
+        top:45%;
+        left:90%;
+    }
+}
